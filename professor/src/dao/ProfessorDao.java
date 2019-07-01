@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dao;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -14,7 +15,8 @@ import modelo.Professor;
  * @author Administrador
  */
 public class ProfessorDao {
-     public static boolean inserir(Professor objeto) {
+
+    public static boolean inserir(Professor objeto) {
         String sql = "INSERT INTO professor (nome, sobrenome, endereco) VALUES (?, ?, ?)";
         try {
             PreparedStatement ps = conexao.Conexao.getConexao().prepareStatement(sql);
@@ -28,12 +30,13 @@ public class ProfessorDao {
             return false;
         }
     }
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Professor objeto = new Professor();
         objeto.setNome("Edimar");
         objeto.setSobrenome("Manica");
         objeto.setEndereco("Brasil");
-        
+
         boolean resultado = inserir(objeto);
         if (resultado) {
             JOptionPane.showMessageDialog(null, "Inserido com sucesso!");

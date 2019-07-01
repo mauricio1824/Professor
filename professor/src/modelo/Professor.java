@@ -12,14 +12,11 @@ import java.util.logging.Logger;
  * @author Administrador
  */
 public class Professor {
+
     private int codigo;
     private String nome;
     private String sobrenome;
     private String endereco;
-
-    public Professor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     public int getCodigo() {
         return codigo;
@@ -50,12 +47,7 @@ public class Professor {
     }
 
     public void setEndereco(String endereco) {
-        this.endereco = endereco;  
-    } 
-
-    public Professor(String nome, String sobrenome) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
+        this.endereco = endereco;
     }
 
     @Override
@@ -63,5 +55,3 @@ public class Professor {
         return "Professor{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", endereco=" + endereco + '}';
     }
 }
-
-
